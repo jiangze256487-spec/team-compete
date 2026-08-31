@@ -1,8 +1,7 @@
-#!/Users/bujiaolv/Desktop/编程/竞赛组队系统/backend/.venv/bin/python3
-# -*- coding: utf-8 -*-
-import re
+#!/Users/bujiaolv/Documents/GitHub/team-compete/backend/.venv/bin/python3
 import sys
 from pip._internal.cli.main import main
 if __name__ == '__main__':
-    sys.argv[0] = re.sub(r'(-script\.pyw|\.exe)?$', '', sys.argv[0])
+    if sys.argv[0].endswith('.exe'):
+        sys.argv[0] = sys.argv[0][:-4]
     sys.exit(main())
